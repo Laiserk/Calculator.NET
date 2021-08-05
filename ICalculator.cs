@@ -12,6 +12,6 @@ namespace CalculatorLib
         double Difference(double x, double y);
         double Multiplication(double x, double y);
         double Division(double x, double y);
-        double Compute();
+        double Compute(string input);
     }
 }
