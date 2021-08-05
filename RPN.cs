@@ -6,8 +6,28 @@ using System.Threading.Tasks;
 
 namespace CalculatorLib
 {
-    class RPN
+    class RPN : ICalculator
     {
+        public double Sum(double x, double y)
+        {
+            return x + y;
+        }
+        public double Difference(double x, double y)
+        {
+            return x - y;
+        }
+        public double Multiplication(double x, double y)
+        {
+            return x * y;
+        }
+        public double Division(double x, double y)
+        {
+            return x / y;
+        }
+        public double Compute()
+        {
+            return 0;
+        }
         public string Pars(string expression)
         {
             return null;
