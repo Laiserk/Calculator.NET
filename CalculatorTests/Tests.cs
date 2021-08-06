@@ -7,247 +7,317 @@ namespace CalculatorTests
     [TestClass]
     public class Tests
     {
-        //Test Sum
+        //Tests Sum
         [TestMethod]
-        public void Sum_4_5_9returned()
+        public void Sum_4_5_Returned_9()
         {
             int x = 4;
             int y = 5;
             int expected = 9;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Sum_0f4_0f5_09returned()
+        public void Sum_0f4_0f5_Returned_0f9()
         {
             double x = 0.4;
             double y = 0.5;
             double expected = 0.9;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Sum_4_0f5_4f9returned()
+        public void Sum_4_0f5_Returned_4f9()
         {
             int x = 4;
             double y = 0.5;
             double expected = 4.5;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Sum_negative4_5_1returned()
+        public void Sum_negative4_5_Returned_1()
         {
             int x = -4;
             int y = 5;
             int expected = 1;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Sum_negative4_negative5_negative9returned()
+        public void Sum_negative4_negative5_Returned_negative9()
         {
             int x = -4;
             int y = -5;
             int expected = -9;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
-        //Test Difference
+        //Tests Difference
         [TestMethod]
-        public void Difference_4_5_negative1returned()
+        public void Difference_4_5_Returned_negative1()
         {
             int x = 4;
             int y = 5;
             int expected = -1;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Difference_5_4_1returned()
+        public void Difference_5_4_Returned_1()
         {
             double x = 5;
             double y = 4;
             double expected = 1;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Difference_4_0f5_3f5returned()
+        public void Difference_4_0f5_Returned_3f5()
         {
             double x = 4;
             double y = 0.5;
             double expected = 3.5;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Difference_negative4_5_negative9returned()
+        public void Difference_negative4_5_Returned_negative9()
         {
             int x = -4;
             int y = 5;
             int expected = -9;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Difference_negative4_negative5_1returned()
+        public void Difference_negative4_negative5_Returned_1()
         {
             int x = -4;
             int y = -5;
             int expected = 1;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
-        //Test Multiplication
+        //Tests Multiplication
         [TestMethod]
-        public void Multiplication_4_5_20returned()
+        public void Multiplication_4_5_Returned_20()
         {
             int x = 4;
             int y = 5;
             int expected = 20;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Multiplication_0f4_0f5_0f2returned()
+        public void Multiplication_0f4_0f5_Returned_0f2()
         {
             double x = 0.4;
             double y = 0.5;
             double expected = 0.2;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Multiplication_4_0f5_2returned()
+        public void Multiplication_4_0f5_Returned_2()
         {
             int x = 4;
             double y = 0.5;
             double expected = 2;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Multiplication_negative4_5_negative20returned()
+        public void Multiplication_negative4_5_Returned_negative20()
         {
             int x = -4;
             int y = 5;
             int expected = -20;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Multiplication_negative4_negative5_20returned()
+        public void Multiplication_negative4_negative5_Returned_20()
         {
             int x = -4;
             int y = -5;
             int expected = 20;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             int actual = (int)calc.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
-        //Test Division
+        //Tests Division
         [TestMethod]
-        public void Division_4_5_0f8returned()
+        public void Division_4_5_Returned_0f8()
         {
             int x = 4;
             int y = 5;
             double expected = 0.8;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Division_0f4_0f5_0f8returned()
+        public void Division_0f4_0f5_Returned_0f8()
         {
             double x = 0.4;
             double y = 0.5;
             double expected = 0.8;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Division_4_0f5_8returned()
+        public void Division_4_0f5_Returned_8()
         {
             int x = 4;
             double y = 0.5;
             double expected = 8;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Division_negative4_5_negative0f8returned()
+        public void Division_negative4_5_Returned_negative0f8()
         {
             int x = -4;
             int y = 5;
             double expected = -0.8;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Division_negative4_negative5_0f8returned()
+        public void Division_negative4_negative5_Returned_0f8()
         {
             int x = -4;
             int y = -5;
             double expected = 0.8;
 
-            Calculator calc = new Calculator();
+            RPN calc = new RPN();
             double actual = calc.Division(x, y);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Tests passing expression
+        [TestMethod]
+        public void Exp_1_Sum_2_Returned_12Sum()
+        {
+            string x = "1+2";
+            string expected = "1 2 + ";
+
+            RPN calc = new RPN();
+            string actual = calc.Pars(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Exp_1_Sum_2_Mult_3_Returned_123MultSum()
+        {
+            string x = "1+2 * 3";
+            string expected = "1 2 3 * + ";
+
+            RPN calc = new RPN();
+            string actual = calc.Pars(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Exp_1_Sum_2_Mult_BR3_Div_4BR_Returned_1234DivMultSum()
+        {
+            string x = "1+2*(3/4)";
+            string expected = "1 2 3 4 / * + ";
+
+            RPN calc = new RPN();
+            string actual = calc.Pars(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Tests compute expression
+        [TestMethod]
+        public void Exp_1_Sum_2_Returned_3()
+        {
+            string x = "1 2 + ";
+            double expected = 3;
+
+            RPN calc = new RPN();
+            double actual = calc.Compute(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Exp_1_Sum_2_Mult_3_Returned_7()
+        {
+            string x = "1 2 3 * + ";
+            double expected = 7;
+
+            RPN calc = new RPN();
+            double actual = calc.Compute(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Exp_1_Sum_2_Mult_BR3_Div_4BR_Returned_2f5()
+        {
+            string x = "1 2 3 4 / * + ";
+            double expected = 2.5;
+
+            RPN calc = new RPN();
+            double actual = calc.Compute(x);
 
             Assert.AreEqual(expected, actual);
         }

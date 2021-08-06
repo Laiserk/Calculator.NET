@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorLib
 {
-    class RPN : ICalculator
+    public class RPN : ICalculator
     {
         public double Sum(double x, double y)
         {
@@ -27,7 +27,7 @@ namespace CalculatorLib
         public double Compute(string input)
         {
             double result = 0;
-            Stack<double> temp = new Stack<double>();
+            var temp = new Stack<double>();
             var rpn = new RPN();
 
             for (int i = 0; i < input.Length; i++) 
@@ -90,7 +90,7 @@ namespace CalculatorLib
         public string Pars(string input)
         {
             string output = string.Empty; 
-            Stack<char> operStack = new Stack<char>(); 
+            var operStack = new Stack<char>(); 
 
             for (int i = 0; i < input.Length; i++) 
             {
@@ -108,8 +108,7 @@ namespace CalculatorLib
 
                         if (i == input.Length) break; 
                     }
-
-                    output += " "; 
+                    output += " ";
                     i--; 
                 }    
                 if (IsOperator(input[i])) 
