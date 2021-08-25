@@ -75,13 +75,29 @@ namespace Calculator.NET
                     }
                     else 
                     {
-                        if (operStack.Count > 0) 
-                            if (GetPriority(input[i]) <= GetPriority(operStack.Peek())) 
-                                output += operStack.Pop().ToString() + " "; 
-                        if(input[i] == '-')
-                            operStack.Push('#');
+                        if (operStack.Count > 0)
+                        {
+                            if (GetPriority(input[i]) <= GetPriority(operStack.Peek()))
+                                output += operStack.Pop().ToString() + " ";
+                        }
+                        if (i > 0)
+                        {
+                            if (input[i] == '-' && (IsOperator(input[i - 1]) && input[i - 1] != ')'))
+                            {
+                                operStack.Push('#');
+                                continue;
+                            }
+                        }
                         else
-                            operStack.Push(char.Parse(input[i].ToString())); 
+                        {
+                            if (input[i] == '-' && i == 0 )
+                            {
+                                operStack.Push('#');
+                                continue;
+                            }
+                        }
+                        
+                        operStack.Push(char.Parse(input[i].ToString())); 
 
                     }
                 }
