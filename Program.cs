@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculatorLib
+namespace Calculator.NET
 {
     class Program
     {
@@ -13,12 +13,13 @@ namespace CalculatorLib
             while (true)
             {
                 Console.WriteLine("Enter expression");
-                var rpn = new RPN();
-                string x = Console.ReadLine();
-                Console.WriteLine(rpn.Pars(x));
-                string y = rpn.Pars(x);
-                Console.WriteLine(rpn.Compute(y));
-                //Console.WriteLine(rpn.Compute(rpn.Pars(Console.ReadLine())));
+                string expression = Console.ReadLine();
+                IPars pars = new ParsRPN();
+                Console.WriteLine(pars.Pars(expression));
+                expression = pars.Pars(expression);
+                ICompute comp = new ComputeRPN();
+                Console.WriteLine(comp.Compute(expression));
+
             }
         }
     }

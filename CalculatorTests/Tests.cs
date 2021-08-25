@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using CalculatorLib;
+using Calculator.NET;
 
 namespace CalculatorTests
 {
@@ -15,8 +15,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = 9;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Sum(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -27,8 +27,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 0.9;
 
-            RPN calc = new RPN();
-            double actual = calc.Sum(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -39,8 +39,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 4.5;
 
-            RPN calc = new RPN();
-            double actual = calc.Sum(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -51,8 +51,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = 1;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Sum(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -63,8 +63,8 @@ namespace CalculatorTests
             int y = -5;
             int expected = -9;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Sum(x, y);
+            IOperetions operetions = new OperetionRPN(); 
+            int actual = (int)operetions.Sum(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -76,8 +76,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = -1;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Difference(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -88,8 +88,8 @@ namespace CalculatorTests
             double y = 4;
             double expected = 1;
 
-            RPN calc = new RPN();
-            double actual = calc.Difference(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -100,8 +100,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 3.5;
 
-            RPN calc = new RPN();
-            double actual = calc.Difference(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -112,8 +112,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = -9;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Difference(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -124,8 +124,8 @@ namespace CalculatorTests
             int y = -5;
             int expected = 1;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Difference(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Difference(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -137,8 +137,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = 20;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Multiplication(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -149,8 +149,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 0.2;
 
-            RPN calc = new RPN();
-            double actual = calc.Multiplication(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -161,8 +161,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 2;
 
-            RPN calc = new RPN();
-            double actual = calc.Multiplication(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -173,8 +173,8 @@ namespace CalculatorTests
             int y = 5;
             int expected = -20;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Multiplication(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -185,8 +185,8 @@ namespace CalculatorTests
             int y = -5;
             int expected = 20;
 
-            RPN calc = new RPN();
-            int actual = (int)calc.Multiplication(x, y);
+            IOperetions operetions = new OperetionRPN();
+            int actual = (int)operetions.Multiplication(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -198,8 +198,8 @@ namespace CalculatorTests
             int y = 5;
             double expected = 0.8;
 
-            RPN calc = new RPN();
-            double actual = calc.Division(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -210,8 +210,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 0.8;
 
-            RPN calc = new RPN();
-            double actual = calc.Division(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -222,8 +222,8 @@ namespace CalculatorTests
             double y = 0.5;
             double expected = 8;
 
-            RPN calc = new RPN();
-            double actual = calc.Division(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -234,8 +234,8 @@ namespace CalculatorTests
             int y = 5;
             double expected = -0.8;
 
-            RPN calc = new RPN();
-            double actual = calc.Division(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -246,8 +246,8 @@ namespace CalculatorTests
             int y = -5;
             double expected = 0.8;
 
-            RPN calc = new RPN();
-            double actual = calc.Division(x, y);
+            IOperetions operetions = new OperetionRPN();
+            double actual = operetions.Division(x, y);
 
             Assert.AreEqual(expected, actual);
         }
@@ -259,8 +259,8 @@ namespace CalculatorTests
             string x = "1+2";
             string expected = "1 2 + ";
 
-            RPN calc = new RPN();
-            string actual = calc.Pars(x);
+            IPars pars = new ParsRPN();
+            string actual = pars.Pars(x);
 
             Assert.AreEqual(expected, actual);
         }
@@ -270,8 +270,8 @@ namespace CalculatorTests
             string x = "1+2 * 3";
             string expected = "1 2 3 * + ";
 
-            RPN calc = new RPN();
-            string actual = calc.Pars(x);
+            IPars pars = new ParsRPN();
+            string actual = pars.Pars(x);
 
             Assert.AreEqual(expected, actual);
         }
@@ -281,8 +281,8 @@ namespace CalculatorTests
             string x = "1+2*(3/4)";
             string expected = "1 2 3 4 / * + ";
 
-            RPN calc = new RPN();
-            string actual = calc.Pars(x);
+            IPars pars = new ParsRPN();
+            string actual = pars.Pars(x);
 
             Assert.AreEqual(expected, actual);
         }
@@ -294,8 +294,8 @@ namespace CalculatorTests
             string x = "1 2 + ";
             double expected = 3;
 
-            RPN calc = new RPN();
-            double actual = calc.Compute(x);
+            ICompute pars = new ComputeRPN();
+            double actual = pars.Compute(x);
 
             Assert.AreEqual(expected, actual);
         }
@@ -305,8 +305,8 @@ namespace CalculatorTests
             string x = "1 2 3 * + ";
             double expected = 7;
 
-            RPN calc = new RPN();
-            double actual = calc.Compute(x);
+            ICompute comp = new ComputeRPN();
+            double actual = comp.Compute(x);
 
             Assert.AreEqual(expected, actual);
         }
@@ -316,8 +316,8 @@ namespace CalculatorTests
             string x = "1 2 3 4 / * + ";
             double expected = 2.5;
 
-            RPN calc = new RPN();
-            double actual = calc.Compute(x);
+            ICompute comp = new ComputeRPN();
+            double actual = comp.Compute(x);
 
             Assert.AreEqual(expected, actual);
         }

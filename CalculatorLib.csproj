@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputeRPN.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="ICompute.cs" />
+    <Compile Include="IOperetions.cs" />
+    <Compile Include="IPars.cs" />
+    <Compile Include="OperetionRPN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RPN.cs" />
+    <Compile Include="ParsRPN.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
