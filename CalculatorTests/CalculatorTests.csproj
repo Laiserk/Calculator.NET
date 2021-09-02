@@ -49,8 +49,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
+    <Compile Include="ComputeRPNTests.cs" />
+    <Compile Include="OperetionTests\DifferenceOperetionTests.cs" />
+    <Compile Include="OperetionTests\DivisionOperationTests.cs" />
+    <Compile Include="OperetionTests\MultiplicationOperationTests.cs" />
+    <Compile Include="ParsRPNTests.cs" />
+    <Compile Include="OperetionTests\SumOperationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OperetionTests\UnaryMinusOperationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

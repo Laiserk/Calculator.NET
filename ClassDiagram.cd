@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Calculator.NET.Operation">
-    <Position X="10" Y="4" Width="1.5" />
+  <Class Name="Calculator.NET.Operation" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operation.cs</FileName>
@@ -9,93 +9,93 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Calculator.NET.DifferenceOperation" Collapsed="true">
-    <Position X="12" Y="1.75" Width="1.5" />
+    <Position X="13.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAJAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operations\DifferenceOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.DivisionOperation" Collapsed="true">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+    <Position X="6.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAJAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operations\DivisionOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.MultiplicationOperation" Collapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+    <Position X="9" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAJAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operations\MultiplicationOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.SumOperation" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+    <Position X="11.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAJAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operations\SumOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.UnaryMinusOperation" Collapsed="true">
-    <Position X="14.25" Y="1.75" Width="1.5" />
+    <Position X="15.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Command\Operations\UnaryMinusOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.ComputeRPN" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="0.5" Width="1.5" />
+    <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ComputeRPN.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.266" />
   </Class>
   <Class Name="Calculator.NET.ParsRPN" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="0.5" Width="1.5" />
+    <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAARAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ParsRPN.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Calculator.NET.Program" Collapsed="true">
-    <Position X="18.5" Y="1.5" Width="1.5" />
+    <Position X="20" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.NET.Command.Processor" Collapsed="true">
-    <Position X="16.75" Y="1.5" Width="1.5" />
+    <Position X="18.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAI=</HashCode>
       <FileName>Command\Processor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Calculator.NET.IOperation">
-    <Position X="18.5" Y="2.75" Width="1.5" />
+  <Interface Name="Calculator.NET.IOperation" Collapsed="true">
+    <Position X="20" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Command\IOperation.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Calculator.NET.ICompute" Collapsed="true">
-    <Position X="16.75" Y="2.75" Width="1.5" />
+    <Position X="18.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICompute.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Calculator.NET.IPars" Collapsed="true">
-    <Position X="16.75" Y="3.5" Width="1.5" />
+    <Position X="18.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPars.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Calculator.NET.OperationState" Collapsed="true">
-    <Position X="16.75" Y="4.5" Width="1.5" />
+    <Position X="18.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAhAAAAAAAAA=</HashCode>
       <FileName>Command\IOperation.cs</FileName>
