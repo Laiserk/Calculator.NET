@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.NET.Command;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,12 @@ namespace Calculator.NET
     public class ComputeRPN : ICompute
     {
         private ParsRPN pars = new ParsRPN();
-        private IOperetions operetions;
-
         public double Compute(string input)
         {
             double result = 0;
             var temp = new Stack<double>();
-            operetions = new OperetionRPN();
+
+            var processor = new Processor();
 
             for (int i = 0; i < input.Length; i++)
             {
@@ -40,8 +40,10 @@ namespace Calculator.NET
                     if (input[i] == '#')
                     {
                         double a = temp.Pop();
-                        result = operetions.UnaryMinus(a);
-                        temp.Push(result);
+                        processor.SetOperation(new UnaryMinusOperation(a));
+                        processor.Run();
+
+                        temp.Push(processor.operation.Result);
 
                     }
                     else
@@ -51,10 +53,22 @@ namespace Calculator.NET
 
                         switch (input[i])
                         {
-                            case '+': result = operetions.Sum(b, a); break;
-                            case '-': result = operetions.Difference(b, a); break;
-                            case '*': result = operetions.Multiplication(b, a); break;
-                            case '/': result = operetions.Division(b, a); break;
+                            case '+':
+                                processor.SetOperation(new SumOperation(b, a));
+                                processor.Run();
+                                result = processor.operation.Result; break;
+                            case '-':
+                                processor.SetOperation(new DifferenceOperation(b, a));
+                                processor.Run();
+                                result = processor.operation.Result; break;
+                            case '*':
+                                processor.SetOperation(new MultiplicationOperation(b, a));
+                                processor.Run();
+                                result = processor.operation.Result; break;
+                            case '/':
+                                processor.SetOperation(new DivisionOperation(b, a));
+                                processor.Run();
+                                result = processor.operation.Result; break;
                         }
                         temp.Push(result);
                     }
