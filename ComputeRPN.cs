@@ -44,7 +44,6 @@ namespace Calculator.NET
                         processor.Run();
 
                         temp.Push(processor.operation.Result);
-
                     }
                     else
                     {
